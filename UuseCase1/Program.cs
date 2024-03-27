@@ -23,7 +23,7 @@ namespace UuseCase1
         {
             UC1 uc1 = new UC1();
             uc1.EmpPresentOrAbsent();
-            Console.WriteLine("Hello");
+            
         }
     }
 }
