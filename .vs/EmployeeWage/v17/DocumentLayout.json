@@ -1,0 +1,47 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hrituj Bansod\\Desktop\\C#\\EmployeeWage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A134F48-FCA7-404F-AD1E-9228F51770ED}|USeCase2\\USeCase2.csproj|c:\\users\\hrituj bansod\\desktop\\c#\\employeewage\\usecase2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A134F48-FCA7-404F-AD1E-9228F51770ED}|USeCase2\\USeCase2.csproj|solutionrelative:usecase2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 319,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hrituj Bansod\\Desktop\\C#\\EmployeeWage\\USeCase2\\Program.cs",
+              "RelativeDocumentMoniker": "USeCase2\\Program.cs",
+              "ToolTip": "C:\\Users\\Hrituj Bansod\\Desktop\\C#\\EmployeeWage\\USeCase2\\Program.cs",
+              "RelativeToolTip": "USeCase2\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T13:04:38.109Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 81,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
