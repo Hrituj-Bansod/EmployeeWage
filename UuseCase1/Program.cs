@@ -66,7 +66,7 @@ namespace UuseCase1
             Console.WriteLine(empWage);
         }
 
-        public static void uSingSwitchCase()
+        public static void UsingSwitchCase()
         {
             const int FULL_TIME = 1;
             const int PART_TIME = 2;
@@ -90,19 +90,52 @@ namespace UuseCase1
                     empHrs = 0;
                     break;
             }
-
             empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine(empWage);
         }
 
-
-
-
-        static void Main(string[] args)
+        public static void MonthDays()
         {
-            UC1 uc1 = new UC1();
-            //uc1.EmpPresentOrAbsent();
-            UC1.EmpPartOrFull();
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
+            const int EMP_RATE_PER_HOUR = 20;
+            const int WORKING_DAYS_IN_MONTH = 20;
+            int empHrs = 0;
+            int empWage = 0;
+            int total_emp_wage = 0;
+
+            for (int day = 0; day <= WORKING_DAYS_IN_MONTH; day++)
+            {
+                Random random = new Random();
+                int check = random.Next(3);
+                switch (check)
+                {
+                    case FULL_TIME:
+                        empHrs = 8;
+                        break;
+
+                    case PART_TIME:
+                        empHrs = 4;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                Console.WriteLine("Wage for employee is :" + empWage);
+                total_emp_wage += empWage;
+            }
+            Console.WriteLine("Total employee wage is : " + total_emp_wage);
         }
+
+        
+            static void Main(string[] args)
+            {
+                UC1 uc1 = new UC1();
+                //uc1.EmpPresentOrAbsent();
+                //UC1.EmpPartOrFull();
+                UC1.MonthDays();
+            }
+        
     }
 }
