@@ -20,7 +20,7 @@ namespace UuseCase1
             }
         }
 
-        public void CalculateEmpWage()
+        public static void CalculateEmpWage()
         {
             int empHrs = 0;
             const int EMP_RATE_PER_HOUR = 20;
@@ -128,13 +128,55 @@ namespace UuseCase1
             Console.WriteLine("Total employee wage is : " + total_emp_wage);
         }
 
-        
-            static void Main(string[] args)
+        public static void MaxHrsOrDays()
+        {
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
+            const int EMP_RATE_PER_HOUR = 20;
+            const int WORKING_DAYS_IN_MONTH = 20;
+            const int MAX_HRS_IN_A_MONTH = 100;
+            int empHrs = 0;
+            int empWage = 0;
+            int totalEmpHrs = 0;
+            int totalWorkingDays = 0;
+            int totalEmpWage = 0;
+
+            while (totalEmpHrs <= MAX_HRS_IN_A_MONTH && totalWorkingDays < WORKING_DAYS_IN_MONTH)
+            {
+                totalWorkingDays++;
+                Random random = new Random();
+                int check = random.Next(3);
+
+                switch (check)
+                {
+                    case FULL_TIME:
+                        empHrs = 8;
+                        break;
+
+                    case PART_TIME:
+                        empHrs = 4;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                totalEmpHrs += empHrs;
+                Console.WriteLine("\nDays : "+totalWorkingDays + "\nHours : "+empHrs);
+            }
+            totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("Total employee wage is : "+totalEmpWage);
+
+
+        }
+        static void Main(string[] args)
             {
                 UC1 uc1 = new UC1();
-                //uc1.EmpPresentOrAbsent();
-                //UC1.EmpPartOrFull();
-                UC1.MonthDays();
+            //uc1.EmpPresentOrAbsent();
+            //UC1.EmpPartOrFull();
+            //UC1.MonthDays();
+            //UC1.CalculateEmpWage();
+            //UC1.UsingSwitchCase();
+            UC1.MaxHrsOrDays();
             }
         
     }
