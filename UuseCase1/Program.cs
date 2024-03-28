@@ -5,7 +5,7 @@ namespace UuseCase1
 {
     internal class UC1
     {
-        public void EmpPresentOrAbsent() 
+        public void EmpPresentOrAbsent()
         {
             Random random = new Random();
             int result = random.Next(2);
@@ -14,7 +14,7 @@ namespace UuseCase1
             {
                 Console.WriteLine("Employee is ABSENT");
             }
-            else 
+            else
             {
                 Console.WriteLine("Employee is PRESENT");
             }
@@ -23,7 +23,8 @@ namespace UuseCase1
         public void CalculateEmpWage()
         {
             int empHrs = 0;
-            int EMP_RATE_PER_HOUR = 20;
+            const int EMP_RATE_PER_HOUR = 20;
+            int empWage = 0;
             Random random = new Random();
             int result = random.Next(2);
             if (result == 0)
@@ -35,19 +36,20 @@ namespace UuseCase1
                 empHrs = 8;
             }
 
-            int EmpWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine(EmpWage);
+            empWage = empHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine(empWage);
         }
 
-        public static void EmpPartOrFull() 
+        public static void EmpPartOrFull()
         {
-            int FULL_TIME = 1;
-            int PART_TIME = 2;
-            int EMP_RATE_PER_HOUR = 20;
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
+            const int EMP_RATE_PER_HOUR = 20;
             int empHrs = 0;
+            int empWage = 0;
 
             Random random = new Random();
-            int result =random.Next(3);
+            int result = random.Next(3);
             if (result == FULL_TIME)
             {
                 empHrs = 8;
@@ -56,13 +58,43 @@ namespace UuseCase1
             {
                 empHrs = 4;
             }
-            else 
+            else
             {
                 empHrs = 0;
             }
-            int empWage = empHrs * EMP_RATE_PER_HOUR;
+            empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine(empWage);
         }
+
+        public static void uSingSwitchCase()
+        {
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
+            const int EMP_RATE_PER_HOUR = 20;
+            int empHrs = 0;
+            int empWage = 0;
+
+            Random random = new Random();
+            int check = random.Next(3);
+
+            switch (check)
+            {
+                case FULL_TIME:
+                    empHrs = 8;
+                    break;
+
+                case PART_TIME:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+            }
+
+            empWage = empHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine(empWage);
+        }
+
 
 
 
